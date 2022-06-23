@@ -10,7 +10,7 @@
       import React, {useState,useEffect} from "react"
       <React.Fragment key={i}></React.Fragment>
 
-# implemented .env data
+# implementing .env data
 
       create .env
       npm i dotenv
