@@ -18,6 +18,10 @@ app.get("/jobs", (req, res) => {
   ]);
 });
 
+app.get("*", function (req, res) {
+  res.status(404).send("404 Not Found");
+});
+
 app.listen(port, () => {
   console.log(`Listening on http://localhost:${port}`);
 });
