@@ -13,34 +13,35 @@
 # implementing .env data
 
       create .env
+
+      .gitignore __ add .env
+
       npm i dotenv
 
       ## in .env
 
-      BASE_URL = http://localhost
-      PORT:3321
-      MODE:development
+            BASE_URL = http://localhost
+            PORT:3321
+            MODE:development
 
       ## in server.js
 
-      import dotenv from 'dotenv';
+            import dotenv from 'dotenv';
 
-      dotenv.config();
-      const mode = process.env.MODE;
-      const baseUrl = process.env.BASE_URL;
-      const port = process.env.PORT;
-      const url = mode === 'development' ? `${baseUrl}:${port}` : baseUrl;
+            dotenv.config();
+            const mode = process.env.MODE;
+            const baseUrl = process.env.BASE_URL;
+            const port = process.env.PORT;
+            const url = mode === 'development' ? `${baseUrl}:${port}` : baseUrl;
 
-      ## debug in hroku, if needed
+      ## debug in heroku, if needed
 
-      heroku login
-      heroku logs -a howto-ejt-backend-dern002 --tail
-
-      .gitignore __ add .env
+            heroku login
+            heroku logs -a howto-ejt-backend-dern002 --tail
 
       ##heroku_settings_revealconfigvars_add
 
-      Key:BASE_URL, value:https://....heroku.app
+            Key:BASE_URL, value:https://....heroku.app
 
       ##netlify_vite also in heroku
 
